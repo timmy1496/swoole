@@ -21,8 +21,7 @@ $http->on(
         for ($i = 0; $i < 1000000; $i++) {
             $str .= 's';
         }
-        $rnd = rand(1, 100);
-        $response->end("Hello swoole, {$rnd} {$str} \n");
+        $response->end("Hello swoole, {$str} \n");
     }
 );
 
