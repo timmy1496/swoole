@@ -17,7 +17,12 @@ $http->on(
 $http->on(
     "request",
     function (Request $request, Response $response) {
-        $response->end("Hello, World33!\n");
+        $str = '';
+        for ($i = 0; $i < 1000000; $i++) {
+            $str .= 's';
+        }
+        $rnd = rand(1, 100);
+        $response->end("Hello swoole, {$rnd} {$str} \n");
     }
 );
 
